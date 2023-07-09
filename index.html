@@ -29,39 +29,82 @@
     <div class="box" id="linuxNeredenBox">
       Linux Nereden Öğrenilmeli?
     </div>
+
     <h2>Python</h2>
     <div class="box" id="pythonNedirBox">
       Python Nedir
+    </div>
+    <div class="box" id="pythonNeKadarBox">
+      Python Ne Kadar Öğrenilmeli?
+    </div>
+    <div class="box" id="pythonNeredenBox">
+      Python Nereden Öğrenilmeli?
     </div>
 
     <h2>Configuration Management</h2>
     <div class="box" id="configurationManagementNedirBox">
       Configuration Management Nedir
     </div>
+    <div class="box" id="configurationManagementNeKadarBox">
+      Configuration Management Ne Kadar Öğrenilmeli?
+    </div>
+    <div class="box" id="configurationManagementNeredenBox">
+      Configuration Management Nereden Öğrenilmeli?
+    </div>
 
     <h2>CI/CD and Automation</h2>
     <div class="box" id="ciCdAutomationNedirBox">
       CI/CD Pipeline & Automation Nedir
+    </div>
+    <div class="box" id="ciCdAutomationNeKadarBox">
+      CI/CD Pipeline & Automation Ne Kadar Öğrenilmeli?
+    </div>
+    <div class="box" id="ciCdAutomationNeredenBox">
+      CI/CD Pipeline & Automation Nereden Öğrenilmeli?
     </div>
 
     <h2>Cloud Providers</h2>
     <div class="box" id="cloudProvidersNedirBox">
       Cloud Providers Nedir
     </div>
+    <div class="box" id="cloudProvidersNeKadarBox">
+      Cloud Providers Ne Kadar Öğrenilmeli?
+    </div>
+    <div class="box" id="cloudProvidersNeredenBox">
+      Cloud Providers Nereden Öğrenilmeli?
+    </div>
 
     <h2>Infrastructure Provisioning</h2>
     <div class="box" id="infrastructureProvisioningNedirBox">
       Infrastructure Provisioning Nedir
+    </div>
+    <div class="box" id="infrastructureProvisioningNeKadarBox">
+      Infrastructure Provisioning Ne Kadar Öğrenilmeli?
+    </div>
+    <div class="box" id="infrastructureProvisioningNeredenBox">
+      Infrastructure Provisioning Nereden Öğrenilmeli?
     </div>
 
     <h2>Container Orchestration</h2>
     <div class="box" id="containerOrchestrationNedirBox">
       Container Orchestration Nedir
     </div>
+    <div class="box" id="containerOrchestrationNeKadarBox">
+      Container Orchestration Ne Kadar Öğrenilmeli?
+    </div>
+    <div class="box" id="containerOrchestrationNeredenBox">
+      Container Orchestration Nereden Öğrenilmeli?
+    </div>
 
     <h2>Monitoring</h2>
     <div class="box" id="monitoringNedirBox">
       Monitoring Nedir
+    </div>
+    <div class="box" id="monitoringNeKadarBox">
+      Monitoring Ne Kadar Öğrenilmeli?
+    </div>
+    <div class="box" id="monitoringNeredenBox">
+      Monitoring Nereden Öğrenilmeli?
     </div>
   </div>
 
@@ -83,40 +126,37 @@
       }
     }
 
-    fetch('data.json')
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById('devopsGirisBox').addEventListener('click', () => showModal('DevOps Giriş', data.devopsGiris));
-        document.getElementById('devopsMuhendisiNeYaparBox').addEventListener('click', () => showModal('DevOps Mühendisi Ne Yapar', data.devopsMuhendisiNeYapar));
-        document.getElementById('linuxNedirBox').addEventListener('click', () => showModal('Linux', data.linuxNedir));
-        document.getElementById('linuxNeKadarBox').addEventListener('click', () => showModal('Linux Ne kadar', data.linuxNeKadar));
-        document.getElementById('linuxNeredenBox').addEventListener('click', () => showModal('Linux', data.linuxNereden));
-        document.getElementById('pythonNedirBox').addEventListener('click', () => showModal('Python', data.pythonNedir));
-        document.getElementById('pythonNeKadarBox').addEventListener('click', () => showModal('Python', data.pythonNeKadar));
-        document.getElementById('pythonNeredenBox').addEventListener('click', () => showModal('Python', data.pythonNereden));
-        document.getElementById('configurationManagementNedirBox').addEventListener('click', () => showModal('Configuration Management', data.configurationManagementNedir));
-        document.getElementById('configurationManagementNeKadarBox').addEventListener('click', () => showModal('Configuration Management', data.configurationManagementNeKadar));
-        document.getElementById('configurationManagementNeredenBox').addEventListener('click', () => showModal('Configuration Management', data.configurationManagementNereden));
-        document.getElementById('ciCdAutomationNedirBox').addEventListener('click', () => showModal('CI/CD Pipeline & Automation', data.ciCdAutomationNedir));
-        document.getElementById('ciCdAutomationNeKadarBox').addEventListener('click', () => showModal('CI/CD Pipeline & Automation', data.ciCdAutomationNeKadar));
-        document.getElementById('ciCdAutomationNeredenBox').addEventListener('click', () => showModal('CI/CD Pipeline & Automation', data.ciCdAutomationNereden));
-        document.getElementById('cloudProvidersNedirBox').addEventListener('click', () => showModal('Cloud Providers', data.cloudProvidersNedir));
-        document.getElementById('cloudProvidersNeKadarBox').addEventListener('click', () => showModal('Cloud Providers', data.cloudProvidersNeKadar));
-        document.getElementById('cloudProvidersNeredenBox').addEventListener('click', () => showModal('Cloud Providers', data.cloudProvidersNereden));
-        document.getElementById('infrastructureProvisioningNedirBox').addEventListener('click', () => showModal('Infrastructure Provisioning', data.infrastructureProvisioningNedir));
-        document.getElementById('infrastructureProvisioningNeKadarBox').addEventListener('click', () => showModal('Infrastructure Provisioning', data.infrastructureProvisioningNeKadar));
-        document.getElementById('infrastructureProvisioningNeredenBox').addEventListener('click', () => showModal('Infrastructure Provisioning', data.infrastructureProvisioningNereden));
-        document.getElementById('containerOrchestrationNedirBox').addEventListener('click', () => showModal('Container Orchestration', data.containerOrchestrationNedir));
-        document.getElementById('containerOrchestrationNeKadarBox').addEventListener('click', () => showModal('Container Orchestration', data.containerOrchestrationNeKadar));
-        document.getElementById('containerOrchestrationNeredenBox').addEventListener('click', () => showModal('Container Orchestration', data.containerOrchestrationNereden));
-        document.getElementById('monitoringNedirBox').addEventListener('click', () => showModal('Monitoring', data.monitoringNedir));
-        document.getElementById('monitoringNeKadarBox').addEventListener('click', () => showModal('Monitoring', data.monitoringNeKadar));
-        document.getElementById('monitoringNeredenBox').addEventListener('click', () => showModal('Monitoring', data.monitoringNereden));
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
-  </script>
-</body>
-
-</html>
+  fetch('data.json')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('devopsGirisBox').addEventListener('click', () => showModal('DevOps Giriş', data.devopsGiris));
+      document.getElementById('devopsMuhendisiNeYaparBox').addEventListener('click', () => showModal('DevOps Mühendisi Ne Yapar', data.devopsMuhendisiNeYapar));
+      document.getElementById('linuxNedirBox').addEventListener('click', () => showModal('Linux Nedir', data.linuxNedir));
+      document.getElementById('linuxNeKadarBox').addEventListener('click', () => showModal('Linux Ne Kadar Öğrenilmeli?', data.linuxNeKadar));
+      document.getElementById('linuxNeredenBox').addEventListener('click', () => showModal('Linux Nereden Öğrenilmeli?', data.linuxNereden));
+      document.getElementById('pythonNedirBox').addEventListener('click', () => showModal('Python Nedir', data.pythonNedir));
+      document.getElementById('pythonNeKadarBox').addEventListener('click', () => showModal('Python Ne Kadar Öğrenilmeli?', data.pythonNeKadar));
+      document.getElementById('pythonNeredenBox').addEventListener('click', () => showModal('Python Nereden Öğrenilmeli?', data.pythonNereden));
+      document.getElementById('configurationManagementNedirBox').addEventListener('click', () => showModal('Configuration Management Nedir', data.configurationManagementNedir));
+      document.getElementById('configurationManagementNeKadarBox').addEventListener('click', () => showModal('Configuration Management Ne Kadar Öğrenilmeli?', data.configurationManagementNeKadar));
+      document.getElementById('configurationManagementNeredenBox').addEventListener('click', () => showModal('Configuration Management Nereden Öğrenilmeli?', data.configurationManagementNereden));
+      document.getElementById('ciCdAutomationNedirBox').addEventListener('click', () => showModal('CI/CD Pipeline & Automation Nedir', data.ciCdAutomationNedir));
+      document.getElementById('ciCdAutomationNeKadarBox').addEventListener('click', () => showModal('CI/CD Pipeline & Automation Ne Kadar Öğrenilmeli?', data.ciCdAutomationNeKadar));
+      document.getElementById('ciCdAutomationNeredenBox').addEventListener('click', () => showModal('CI/CD Pipeline & Automation Nereden Öğrenilmeli?', data.ciCdAutomationNereden));
+      document.getElementById('cloudProvidersNedirBox').addEventListener('click', () => showModal('Cloud Providers Nedir', data.cloudProvidersNedir));
+      document.getElementById('cloudProvidersNeKadarBox').addEventListener('click', () => showModal('Cloud Providers Ne Kadar Öğrenilmeli?', data.cloudProvidersNeKadar));
+      document.getElementById('cloudProvidersNeredenBox').addEventListener('click', () => showModal('Cloud Providers Nereden Öğrenilmeli?', data.cloudProvidersNereden));
+      document.getElementById('infrastructureProvisioningNedirBox').addEventListener('click', () => showModal('Infrastructure Provisioning Nedir', data.infrastructureProvisioningNedir));
+      document.getElementById('infrastructureProvisioningNeKadarBox').addEventListener('click', () => showModal('Infrastructure Provisioning Ne Kadar Öğrenilmeli?', data.infrastructureProvisioningNeKadar));
+      document.getElementById('infrastructureProvisioningNeredenBox').addEventListener('click', () => showModal('Infrastructure Provisioning Nereden Öğrenilmeli?', data.infrastructureProvisioningNereden));
+      document.getElementById('containerOrchestrationNedirBox').addEventListener('click', () => showModal('Container Orchestration Nedir', data.containerOrchestrationNedir));
+      document.getElementById('containerOrchestrationNeKadarBox').addEventListener('click', () => showModal('Container Orchestration Ne Kadar Öğrenilmeli?', data.containerOrchestrationNeKadar));
+      document.getElementById('containerOrchestrationNeredenBox').addEventListener('click', () => showModal('Container Orchestration Nereden Öğrenilmeli?', data.containerOrchestrationNereden));
+      document.getElementById('monitoringNedirBox').addEventListener('click', () => showModal('Monitoring Nedir', data.monitoringNedir));
+      document.getElementById('monitoringNeKadarBox').addEventListener('click', () => showModal('Monitoring Ne Kadar Öğrenilmeli?', data.monitoringNeKadar));
+      document.getElementById('monitoringNeredenBox').addEventListener('click', () => showModal('Monitoring Nereden Öğrenilmeli?', data.monitoringNereden));
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+</script>
