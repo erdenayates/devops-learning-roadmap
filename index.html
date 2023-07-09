@@ -13,58 +13,45 @@
         <div class="box" onclick="showModal('Cloud Computing', 'This is some information about Cloud Computing.')">
             Cloud Computing
         </div>
-          
+
         <h2>CI/CD and Automation</h2>
-        <div class="box">CI/CD Pipeline & Automation</div>
-        <div class="box">Tools & Services (CI/CD, Monitoring, Security, etc.)</div>
+        <div class="box" onclick="showModal('CI/CD Pipeline & Automation', 'This is some information about CI/CD Pipeline & Automation.')">
+            CI/CD Pipeline & Automation
+        </div>
 
         <h2>Containers and Orchestration</h2>
-        <div class="box">Containerization</div>
-        <div class="box">Orchestration (Kubernetes)</div>
+        <div class="box" onclick="showModal('Orchestration (Kubernetes)', 'This is some information about Orchestration (Kubernetes).')">
+            Orchestration (Kubernetes)
+        </div>
 
-        <h2>Infrastructure and Networking</h2>
-        <div class="box">Infrastructure as Code</div>
-        <div class="box">Networking & Infrastructure</div>
-        <div class="box">Networking Protocols</div>
-
-        <h2>Monitoring and Security</h2>
-        <div class="box">Monitoring & Logging</div>
-        <div class="box">Security & Compliance</div>
-
-        <h2>Collaboration and Version Control</h2>
-        <div class="box">Agile & Collaboration Tools</div>
-        <div class="box">Version Control & Git</div>
+        <h2>Monitoring and Logging</h2>
+        <div class="box" onclick="showModal('Monitoring & Logging', 'This is some information about Monitoring & Logging.')">
+            Monitoring & Logging
+        </div>
 
         <h2>Programming and Servers</h2>
-        <div class="box">Programming Languages & Frameworks</div>
-        <div class="box">Operating Systems & Servers</div>
-
-        <h2>Computer Architecture and Fundamentals</h2>
-        <div class="box">Computer Architecture</div>
-        <div class="box">IT Fundamentals & Concepts</div>
-
-        <h2>Problem Solving and Communication Skills</h2>
-        <div class="box">Problem Solving & Critical Thinking</div>
-        <div class="box">Communication Skills</div>
-
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <span id="modal-title"></span>
-                <p id="modal-info"></p>
-            </div>
+        <div class="box" onclick="showModal('Programming Languages & Frameworks', 'This is some information about Programming Languages & Frameworks.')">
+            Programming Languages & Frameworks
         </div>
     </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="modal-title"></span>
+            <p id="modal-info"></p>
+        </div>
+    </div>
+
     <script>
-        function showModal(title, info) {
-            var modal = document.getElementById("modal");
-            document.getElementById("modal-title").textContent = title;
-            document.getElementById("modal-info").textContent = info;
-            modal.style.display = "block";
-            modal.onclick = function() {
-                modal.style.display = "none";
-            }
+    function showModal(title, info) {
+        var modal = document.getElementById("modal");
+        document.getElementById("modal-title").textContent = title;
+        document.getElementById("modal-info").textContent = info;
+        modal.style.display = "block";
+        modal.onclick = function() {
+            modal.style.display = "none";
         }
-        </script>
-        
+    }
+    </script>
 </body>
 </html>
