@@ -1,70 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DevOps Learning Path</title>
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Learning Path</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-  <h1>DevOps Learning Path</h1>
-  <div class="container">
-    <h2>Cloud Services</h2>
-    <div class="box" id="cloudComputingBox">
-      Cloud Computing
+    <h1>DevOps Learning Path</h1>
+    <div class="container">
+        <h2>DevOps Giris</h2>
+        <div class="box" id="devopsaGirisBox">
+            DevOps Nedir
+        </div>
+        <div class="box" id="devopsMuhendisiNeYaparBox">
+            DevOps Muhendisi Ne Yapar
+        </div>
+
+        <h2>CI/CD and Automation</h2>
+        <div class="box" id="ciCdAutomationBox">
+            CI/CD Pipeline & Automation
+        </div>
+
+        <h2>Containers and Orchestration</h2>
+        <div class="box" id="orchestrationBox">
+            Orchestration (Kubernetes)
+        </div>
+
+        <h2>Monitoring and Logging</h2>
+        <div class="box" id="monitoringLoggingBox">
+            Monitoring & Logging
+        </div>
+
+        <h2>Programming and Servers</h2>
+        <div class="box" id="programmingFrameworksBox">
+            Programming Languages & Frameworks
+        </div>
     </div>
 
-    <h2>CI/CD and Automation</h2>
-    <div class="box" id="ciCdAutomationBox">
-      CI/CD Pipeline & Automation
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="modal-title"></span>
+            <p id="modal-info"></p>
+        </div>
     </div>
 
-    <h2>Containers and Orchestration</h2>
-    <div class="box" id="orchestrationBox">
-      Orchestration (Kubernetes)
-    </div>
+    <script>
+        function showModal(title, info) {
+            var modal = document.getElementById("modal");
+            document.getElementById("modal-title").textContent = title;
+            document.getElementById("modal-info").textContent = info;
+            modal.style.display = "block";
+            modal.onclick = function () {
+                modal.style.display = "none";
+            }
+        }
 
-    <h2>Monitoring and Logging</h2>
-    <div class="box" id="monitoringLoggingBox">
-      Monitoring & Logging
-    </div>
-
-    <h2>Programming and Servers</h2>
-    <div class="box" id="programmingFrameworksBox">
-      Programming Languages & Frameworks
-    </div>
-  </div>
-
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span id="modal-title"></span>
-      <p id="modal-info"></p>
-    </div>
-  </div>
-
-  <script>
-    function showModal(title, info) {
-      var modal = document.getElementById("modal");
-      document.getElementById("modal-title").textContent = title;
-      document.getElementById("modal-info").textContent = info;
-      modal.style.display = "block";
-      modal.onclick = function() {
-        modal.style.display = "none";
-      }
-    }
-
-    fetch('data.json')
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById('cloudComputingBox').addEventListener('click', () => showModal('Cloud Computing', data.cloudComputing));
-        document.getElementById('ciCdAutomationBox').addEventListener('click', () => showModal('CI/CD Pipeline & Automation', data.ciCdAutomation));
-        document.getElementById('orchestrationBox').addEventListener('click', () => showModal('Orchestration (Kubernetes)', data.orchestration));
-        document.getElementById('monitoringLoggingBox').addEventListener('click', () => showModal('Monitoring & Logging', data.monitoringLogging));
-        document.getElementById('programmingFrameworksBox').addEventListener('click', () => showModal('Programming Languages & Frameworks', data.programmingFrameworks));
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
-  </script>
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('devopsaGirisBox').addEventListener('click', () => showModal('DevOps Giris', data.devopsaGiris));
+                document.getElementById('devopsMuhendisiNeYaparBox').addEventListener('click', () => showModal('DevOps Muhendisi Ne Yapar', data.devopsMuhendisiNeYapar));
+                document.getElementById('ciCdAutomationBox').addEventListener('click', () => showModal('CI/CD Pipeline & Automation', data.ciCdAutomation));
+                document.getElementById('orchestrationBox').addEventListener('click', () => showModal('Orchestration (Kubernetes)', data.orchestration));
+                document.getElementById('monitoringLoggingBox').addEventListener('click', () => showModal('Monitoring & Logging', data.monitoringLogging));
+                document.getElementById('programmingFrameworksBox').addEventListener('click', () => showModal('Programming Languages & Frameworks', data.programmingFrameworks));
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    </script>
 </body>
+
 </html>
