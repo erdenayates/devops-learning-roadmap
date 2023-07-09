@@ -1,57 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps Learning Path</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevOps Learning Path</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>DevOps Learning Path</h1>
-    <div class="container">
-        <h2>Cloud Services</h2>
-        <div class="box" onclick="showModal('Cloud Computing', 'This is some information about Cloud Computing.')">
-            Cloud Computing
-        </div>
-
-        <h2>CI/CD and Automation</h2>
-        <div class="box" onclick="showModal('CI/CD Pipeline & Automation', 'This is some information about CI/CD Pipeline & Automation.')">
-            CI/CD Pipeline & Automation
-        </div>
-
-        <h2>Containers and Orchestration</h2>
-        <div class="box" onclick="showModal('Orchestration (Kubernetes)', 'This is some information about Orchestration (Kubernetes).')">
-            Orchestration (Kubernetes)
-        </div>
-
-        <h2>Monitoring and Logging</h2>
-        <div class="box" onclick="showModal('Monitoring & Logging', 'This is some information about Monitoring & Logging.')">
-            Monitoring & Logging
-        </div>
-
-        <h2>Programming and Servers</h2>
-        <div class="box" onclick="showModal('Programming Languages & Frameworks', 'This is some information about Programming Languages & Frameworks.')">
-            Programming Languages & Frameworks
-        </div>
+  <h1>DevOps Learning Path</h1>
+  <div class="container">
+    <h2>Cloud Services</h2>
+    <div class="box" id="cloudComputingBox">
+      Cloud Computing
     </div>
 
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span id="modal-title"></span>
-            <p id="modal-info"></p>
-        </div>
+    <h2>CI/CD and Automation</h2>
+    <div class="box" id="ciCdAutomationBox">
+      CI/CD Pipeline & Automation
     </div>
 
-    <script>
+    <h2>Containers and Orchestration</h2>
+    <div class="box" id="orchestrationBox">
+      Orchestration (Kubernetes)
+    </div>
+
+    <h2>Monitoring and Logging</h2>
+    <div class="box" id="monitoringLoggingBox">
+      Monitoring & Logging
+    </div>
+
+    <h2>Programming and Servers</h2>
+    <div class="box" id="programmingFrameworksBox">
+      Programming Languages & Frameworks
+    </div>
+  </div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="modal-title"></span>
+      <p id="modal-info"></p>
+    </div>
+  </div>
+
+  <script>
     function showModal(title, info) {
-        var modal = document.getElementById("modal");
-        document.getElementById("modal-title").textContent = title;
-        document.getElementById("modal-info").textContent = info;
-        modal.style.display = "block";
-        modal.onclick = function() {
-            modal.style.display = "none";
-        }
+      var modal = document.getElementById("modal");
+      document.getElementById("modal-title").textContent = title;
+      document.getElementById("modal-info").textContent = info;
+      modal.style.display = "block";
+      modal.onclick = function() {
+        modal.style.display = "none";
+      }
     }
-    </script>
+
+    fetch('data.json')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('cloudComputingBox').addEventListener('click', () => showModal('Cloud Computing', data.cloudComputing));
+        document.getElementById('ciCdAutomationBox').addEventListener('click', () => showModal('CI/CD Pipeline & Automation', data.ciCdAutomation));
+        document.getElementById('orchestrationBox').addEventListener('click', () => showModal('Orchestration (Kubernetes)', data.orchestration));
+        document.getElementById('monitoringLoggingBox').addEventListener('click', () => showModal('Monitoring & Logging', data.monitoringLogging));
+        document.getElementById('programmingFrameworksBox').addEventListener('click', () => showModal('Programming Languages & Frameworks', data.programmingFrameworks));
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  </script>
 </body>
 </html>
