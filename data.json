@@ -1,8 +1,12 @@
 {
-  "devopsaGiris": "This is some information about Cloud Computing.",
-  "devopsMuhendisiNeYapar": "This is some information about Cloud Computing.",
-  "ciCdAutomation": "I fluff my hubby erdenay :3",
-  "orchestration": "This is some information about Orchestration (Kubernetes).",
-  "monitoringLogging": "This is some information about Monitoring & Logging.",
-  "programmingFrameworks": "This is some information about Programming Languages & Frameworks."
+  "devopsGiris": "This is some information about DevOps Giriş.",
+  "devopsMuhendisiNeYapar": "This is some information about DevOps Mühendisi Ne Yapar.",
+  "linux": "This is some information about Linux.",
+  "python": "This is some information about Python.",
+  "configurationManagement": "This is some information about Configuration Management.",
+  "ciCdAutomation": "This is some information about CI/CD Pipeline & Automation.",
+  "cloudProviders": "This is some information about Cloud Providers.",
+  "infrastructureProvisioning": "This is some information about Infrastructure Provisioning.",
+  "containerOrchestration": "This is some information about Container Orchestration.",
+  "monitoring": "This is some information about Monitoring."
 }
